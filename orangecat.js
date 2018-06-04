@@ -12,4 +12,8 @@ orangecat.get("/about",function(req, res){
 	res.render("about")
 });
 
+orangecat.get("/1",function(req, res){
+	res.render("index")
+});
+
 orangecat.listen(PORT, () => console.log(`Listening on ${ PORT }`));
