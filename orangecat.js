@@ -9,7 +9,7 @@ orangecat.get("/",function(req, res){
 });
 
 orangecat.get("/about",function(req, res){
-	res.render("homepage")
+	res.render("about")
 });
 
 orangecat.listen(PORT, () => console.log(`Listening on ${ PORT }`));
