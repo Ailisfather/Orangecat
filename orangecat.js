@@ -1,7 +1,7 @@
 var express = require("express");
 var orangecat = express();
 const PORT = process.env.PORT || 5000
-orangecat.use(express.static(path.join(__dirname, '/ressources')))
+//orangecat.use(express.static(path.join(__dirname, '/ressources')))
 //orangecat.set("view engine", "ejs")
 
 orangecat.get("/",function(req, res){
