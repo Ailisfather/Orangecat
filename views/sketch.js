@@ -15,7 +15,6 @@ function draw() {
 }
 
 function branch(len){
-  strokeWeight(10);
   line(0, 0, 0, -len);
   translate(0, -len);
   if (len > Depth){
