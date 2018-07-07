@@ -12,7 +12,7 @@
 #myCanvas {
   height: 600px;
   width: 800px;
-  background : #edc36f;
+  background : rgb(100, 100, 100);
   position: relative;
 }
 .buttonR{
