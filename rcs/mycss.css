@@ -1,23 +1,51 @@
-.canvas {
+#canvas{
   height: 600px;
-  width: 600px;
-  background : rgb(100, 100, 100);
   position: relative;
+  width: 800px;
   right: 0;
   left:0;
   bottom:0; 
   top:0;
   margin:auto; 
 }
+
+#myCanvas {
+  height: 600px;
+  width: 800px;
+  background : rgb(100, 100, 100);
+  position: relative;
+}
 .buttonR{
-    background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 291px 16px;
+    padding: 50px 100px;
+    background : rgb(100, 100, 100);
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     margin: 4px 2px;
     cursor: pointer;
+    transition: all 0.5s;
+}
+.buttonR:hover {
+    background : rgb(90, 90, 90);
+    color: white;
+}
+.buttonR:active {
+    background : rgb(110, 110, 110);
+    color: white;
+    transition: 0s;
+}
+
+button:focus {outline:0;}
+
+#text{
+  font-size:3em; 
+  position:absolute; 
+  left:380px; 
+  top:0px; 
+  z-index:100; 
+  font-family:verdana;
+  color:#FEE6E1;
 }

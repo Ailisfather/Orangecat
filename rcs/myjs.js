@@ -1,6 +1,6 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.translate(300, 600);
+ctx.translate(400, 600);
 var limit = 5;
 document.getElementById("text").innerHTML = limit;
 ctx.save();
