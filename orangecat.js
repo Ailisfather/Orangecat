@@ -1,8 +1,8 @@
-var express = require("express");
+var express = require('express')
 const path = require('path')
-var orangecat = express();
+var orangecat = express()
 const PORT = process.env.PORT || 5000
-//orangecat.use(express.static(path.join(__dirname, '/rcs')))
+orangecat.use(express.static(path.join(__dirname, '/rcs')))
 //orangecat.set("view engine", "ejs")
 
 orangecat.get("/",function(req, res){
@@ -17,8 +17,5 @@ orangecat.get("/1",function(req, res){
 	res.render("index.ejs")
 });
 
-orangecat.get("/sketch.js",function(req, res){
-	res.render("sketch.js")
-});
 
 orangecat.listen(PORT, () => console.log(`Listening on ${ PORT }`));
