@@ -13,8 +13,8 @@ orangecat.get("/fractaltree1",function(req, res){
 	res.render("fractaltree1.ejs")
 });
 
-orangecat.get("/1",function(req, res){
-	res.render("index.ejs")
+orangecat.get("/starfield",function(req, res){
+	res.render("starfield.ejs")
 });
 
 
