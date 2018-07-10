@@ -9,8 +9,8 @@ orangecat.get("/",function(req, res){
 	res.render("homepage.ejs")
 });
 
-orangecat.get("/about",function(req, res){
-	res.render("about.ejs")
+orangecat.get("/fractaltree1",function(req, res){
+	res.render("fractaltree1.ejs")
 });
 
 orangecat.get("/1",function(req, res){
