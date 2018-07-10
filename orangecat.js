@@ -17,5 +17,9 @@ orangecat.get("/starfield",function(req, res){
 	res.render("starfield.ejs")
 });
 
+orangecat.get("/snake",function(req, res){
+	res.render("snake.ejs")
+});
+
 
 orangecat.listen(PORT, () => console.log(`Listening on ${ PORT }`));
