@@ -1,4 +1,5 @@
-var oText = document.getElementById('text');
+
+var oText = document.getElementById('input');
 var oButton = document.getElementById('button');
 var oUl = document.getElementById('content');
 
