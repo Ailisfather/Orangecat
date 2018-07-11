@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>comment</title>
+        <style>
+            *{margin:0;padding:0;}
+            ul, li{list-style:none;}
+        </style>
+    </head>
+    <body>
+        <input type="text" name="text" id="text" /><input type="button" value="Submit" id="button" />
+        <ul id="content"></ul>
+    </body>
+    <script>
+        (function(){
+            // 1. 获取文本框、点击按钮、ul
+            var oText = document.getElementById('text');
+            var oButton = document.getElementById('button');
+            var oUl = document.getElementById('content');
+            // 2. 给点击按钮添加点击事件
+            oButton.onclick = function(){
+                /*// 3. 获取文本框的内容
+                var sText = oText.value;
+                // 4. 动态创建一个li
+                var oLi = document.createElement('li'); 
+                // 5. 把文本内容赋值给li
+                // innerHTML会覆盖原有的内容，TextNode的方式不会
+                oLi.innerHTML = sText;
+                //var oTextNode = document.createElement('TextNode');
+                //oTextNode.innerHTML = sText;
+                //oLi.appendChild(oTextNode);
+                // 6. 把li添加到ul的首节点  
+                // 6.1 判断ul是否有首节点(通过children的长度)
+                if (oUl.children.length > 0){
+                    // 6.2 有获取首节点
+                    var oFirstNode = oUl.children[0];
+                    // 6.3把新的节点添加 到首节点之前
+                    oUl.insertBefore(oLi, oFirstNode);
+                }else{
+                    // 6.4如果没有ul直接添加li
+                    oUl.appendChild(oLi);
+                }*/
+                appendLi();
+            };
+
+            // 回车提交数据
+            // 1. 获取文本框
+            // 2. 给文本框绑定keydown事件
+            /*oText.onkeydown = function(e){
+                e = e || event;
+                // console.log(e.keyCode);  // 回车键的ASCII是13
+                // 3. 判断keycode是否为回车键的数字
+                if(e.keyCode == 13){
+                    // 4. 如果是创建li节点，把li添加到首节点之前
+                    appendLi();
+                }
+            }*/
+
+            // Ctrl+回车提交数据
+            oText.onkeydown = function(e){
+                e = e || event;
+                // console.log(e.keyCode);  // 回车键的ASCII是13
+                // 3. 判断keycode是否为回车键的数字，再判断是否有按下ctrl键
+                /*e.altKey
+                e.shiftKey
+                e.ctrlKey*/
+
+
+                if(e.keyCode == 13 && e.ctrlKey){
+                    // 4. 如果是创建li节点，把li添加到首节点之前
+                    appendLi();
+                }
+            }
+
+            function appendLi(){
+                // 3. 获取文本框的内容
+                var sText = oText.value;
+                // 4. 动态创建一个li
+                var oLi = document.createElement('li'); 
+                // 5. 把文本内容赋值给li
+                // innerHTML会覆盖原有的内容，TextNode的方式不会
+                oLi.innerHTML = sText;
+                //var oTextNode = document.createElement('TextNode');
+                //oTextNode.innerHTML = sText;
+                //oLi.appendChild(oTextNode);
+                // 6. 把li添加到ul的首节点  
+                // 6.1 判断ul是否有首节点(通过children的长度)
+                if (oUl.children.length > 0){
+                    // 6.2 有获取首节点
+                    var oFirstNode = oUl.children[0];
+                    // 6.3把新的节点添加 到首节点之前
+                    oUl.insertBefore(oLi, oFirstNode);
+                }else{
+                    // 6.4如果没有ul直接添加li
+                    oUl.appendChild(oLi);
+                }
+            }
+        })();
+    </script>
+</html>
