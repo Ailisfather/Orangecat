@@ -55,3 +55,7 @@ function update(){
     window.requestAnimationFrame(update);
 }
 update();
+
+function number(){
+    numStars = document.getElementById("number").value;
+}
