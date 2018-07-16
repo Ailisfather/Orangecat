@@ -2,7 +2,7 @@ var canvas = document.getElementsByTagName('canvas')[0], c = canvas.getContext("
 canvas.width = 600;
 canvas.height = 600;
 var size = 1;
-var numStars = 100;
+var numStars = 0;
 var stars = [];
 var fl = canvas.width;
 var centerX = canvas.width/2, centerY = canvas.height/2;
@@ -58,4 +58,5 @@ update();
 
 function number(){
     numStars = document.getElementById("number").value;
+    stars[i] = new Star();
 }
