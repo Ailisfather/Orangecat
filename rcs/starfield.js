@@ -58,5 +58,8 @@ update();
 
 function number(){
     numStars = document.getElementById("number").value;
-    stars[i] = new Star();
+    for (var i = 0; i < numStars; i++)
+  	{
+    	stars[i] = new Star();
+  	}
 }
