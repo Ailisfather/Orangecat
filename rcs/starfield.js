@@ -21,6 +21,8 @@ function Star(){
     this.z = this.z - 5;
     if (this.z <= 0)
       {
+      	this.x = Math.random()*canvas.width;
+        this.y = Math.random()*canvas.height;
         this.z = canvas.width
       }
   }
