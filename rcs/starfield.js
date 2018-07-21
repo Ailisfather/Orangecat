@@ -2,7 +2,7 @@ var canvas = document.getElementsByTagName('canvas')[0], c = canvas.getContext("
 canvas.width = 600;
 canvas.height = 600;
 var size = 1;
-var numStars = 0;
+var numStars = 0
 var stars = [];
 var fl = canvas.width;
 var centerX = canvas.width/2, centerY = canvas.height/2;
@@ -21,7 +21,7 @@ function Star(){
     this.z = this.z - 5;
     if (this.z <= 0)
       {
-      	this.x = Math.random()*canvas.width;
+        this.x = Math.random()*canvas.width;
         this.y = Math.random()*canvas.height;
         this.z = canvas.width
       }
@@ -49,7 +49,6 @@ function draw(){
     stars[i].show();
     stars[i].move();
   }
-
 }
 
 function update(){
@@ -58,10 +57,19 @@ function update(){
 }
 update();
 
+var input = document.getElementById("number");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        number();
+    }
+});
+
+
 function number(){
     numStars = document.getElementById("number").value;
-    for (var i = 0; i < numStars; i++)
-  	{
-    	stars[i] = new Star();
-  	}
+  for (var i = 0; i < numStars; i++)
+  {
+    stars[i] = new Star();
+  }
 }

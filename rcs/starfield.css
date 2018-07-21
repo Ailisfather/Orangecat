@@ -14,3 +14,18 @@ canvas {
   background: black;
   position: relative;
 }
+
+input[type=text] {
+    width: 25%;
+    padding: 12px 50px;
+    margin: 8px 38%;
+    box-sizing: border-box;
+    border: none;
+    background-color: #333333;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background-color: #595959;
+    outline:0;
+}
