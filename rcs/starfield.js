@@ -57,7 +57,7 @@ function update(){
 }
 update();
 
-var input = document.getElementById("num");
+var input = document.getElementById("searchTxt");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
@@ -67,7 +67,7 @@ input.addEventListener("keyup", function(event) {
 
 
 function number(){
-    numStars = document.getElementById("num").value;
+    numStars = document.getElementById("searchTxt").value;
   for (var i = 0; i < numStars; i++)
   {
     stars[i] = new Star();
