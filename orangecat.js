@@ -21,8 +21,8 @@ orangecat.get("/starfield",function(req, res){
 	res.render("starfield.ejs")
 });
 
-orangecat.get("/snake",function(req, res){
-	res.render("snake.ejs")
+orangecat.get("/pac",function(req, res){
+	res.render("pac.ejs")
 });
 
 
