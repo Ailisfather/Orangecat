@@ -25,5 +25,8 @@ orangecat.get("/pac",function(req, res){
 	res.render("pac.ejs")
 });
 
+orangecat.get("/singlepen",function(req, res){
+	res.render("singlepen.ejs")
+});
 
 orangecat.listen(PORT, () => console.log(`Listening on ${ PORT }`));
